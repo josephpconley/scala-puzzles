@@ -30,8 +30,6 @@ name := "puzzles"
 
 version := "0.1"
 
-scalaVersion := "2.10.3"
-
 libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "2.3.4" % "test",
   "net.sourceforge.htmlunit" % "htmlunit" % "2.13",
@@ -51,7 +49,7 @@ mappings in (Compile, packageBin) ~= { (ms: Seq[(File, String)]) =>
   }
 }
 
-lazy val root = project in file(".") overrideConfigs (CustomPackage)
+lazy val puzzles = project in file(".") overrideConfigs (CustomPackage)
 
 //packageBin in CustomPackage := {
 //  val log = streams.value.log
